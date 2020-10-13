@@ -9,7 +9,7 @@
 #代码里有 name: 后面的内容随便改,冒号后面是有个空格的,如果修改固件名字就要考虑能不能显示出你想要的
 
 
-name: 18.06-4.19-OpenWrt 固件
+name: 19.07-OpenWrt-CTCGFW 固件
 
 on:
   repository_dispatch:
@@ -39,7 +39,7 @@ on:
 
 env:
   REPO_URL: https://github.com/project-openwrt/openwrt
-  REPO_BRANCH: openwrt-18.06
+  REPO_BRANCH: openwrt-19.07
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: project-419.config
   DIY_OP_SH: project-419.sh
