@@ -23,6 +23,8 @@ sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' ./package/lean/default-settings/files/z
 # 修改内核版本（版本内核默认4.19，还有4.14跟4.9内核）
 #sed -i 's/KERNEL_PATCHVER:=4.19/KERNEL_PATCHVER:=4.9/g' ./target/linux/x86/Makefile
 
+#最新的openclash
+rm -rf ./package/ctcgfw/luci-app-openclash && git clone https://github.com/vernesong/OpenClash.git package/ctcgfw/luci-app-openclash
 
 # 删除已知的重复文件
-rm -rf ./package/lienol/luci-app-timecontrol
+#rm -rf ./package/lienol/luci-app-timecontrol
