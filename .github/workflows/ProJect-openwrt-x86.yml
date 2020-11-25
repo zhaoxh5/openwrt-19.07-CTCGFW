@@ -19,7 +19,7 @@ on:
 #    branches:
 #      - master
 #    paths:
-#      - 'project-419.config'
+#      - 'project-x86.config'
 
 
 #release发布触发开始编译(只是一个触发条件,不会发布的,又麻烦,没卵用,不用研究)
@@ -41,8 +41,8 @@ env:
   REPO_URL: https://github.com/project-openwrt/openwrt
   REPO_BRANCH: openwrt-19.07
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: project-419.config
-  DIY_OP_SH: project-419.sh
+  CONFIG_FILE: project-x86.config
+  DIY_OP_SH: project-x86.sh
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_CONFIG: true
@@ -94,7 +94,7 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
 
-    - name: 加载project-419.config设置
+    - name: 加载project-x86.config设置
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
